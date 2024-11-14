@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Home.module.css';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
+  const naviage = useNavigate();
   interface question {
     id: number;
     content: string;
@@ -44,13 +46,21 @@ function Home() {
     }
   };
 
+  const navigateToRandomQuestionPage = () => {
+    naviage('/randomQuestion', { state: questionList });
+  };
+
   return (
     <div className={styles.main_container}>
       <header>
         <h2 className={styles.main_title}>질문 돌림판</h2>
       </header>
       <article className={styles.start_btn_container}>
-        <button type="button" className={styles.start_btn}>
+        <button
+          type="button"
+          onClick={() => navigateToRandomQuestionPage()}
+          className={styles.start_btn}
+        >
           질문 돌림판 시작하기
         </button>
       </article>
