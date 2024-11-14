@@ -53,16 +53,13 @@ function Home() {
   };
 
   useEffect(() => {
+    console.log('--locastorage의 질문 수정하기--');
     console.log(JSON.stringify(questionList));
     localStorage.setItem('questionsList', JSON.stringify(questionList));
   }, [questionList]);
 
   const navigateToRandomQuestionPage = () => {
-    if (questionList.length >= 2) {
-      naviage('/randomQuestion', { state: questionList });
-    } else {
-      window.alert('질문이 2개 이상이어야 합니다.');
-    }
+    naviage('/randomQuestion', { state: questionList });
   };
 
   return (
