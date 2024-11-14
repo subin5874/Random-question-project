@@ -11,7 +11,13 @@ function Home() {
 
   const [inputText, setInputText] = useState<string>('');
 
-  const [questionList, setQuestionList] = useState<question[]>([]);
+  const [questionList, setQuestionList] = useState<question[]>(() => {
+    const savedQuestionList = localStorage.getItem('questionsList');
+    if (savedQuestionList) {
+      return JSON.parse(savedQuestionList);
+    }
+    return [];
+  });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputText(e.target.value);
@@ -45,6 +51,12 @@ function Home() {
       return;
     }
   };
+
+  useEffect(() => {
+    console.log('--locastorage의 질문 수정하기--');
+    console.log(JSON.stringify(questionList));
+    localStorage.setItem('questionsList', JSON.stringify(questionList));
+  }, [questionList]);
 
   const navigateToRandomQuestionPage = () => {
     naviage('/randomQuestion', { state: questionList });
