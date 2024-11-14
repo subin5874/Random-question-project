@@ -1,0 +1,40 @@
+.main_container {
+  margin: 120px 120px;
+}
+
+.back_btn {
+  position: absolute;
+  left: 10%;
+  text-decoration-line: none;
+  color: inherit;
+}
+
+.randomQuestion_container {
+  margin: 50px 20% 0 20%;
+}
+
+.content_box {
+  border-radius: 10px;
+  width: 100%;
+  background-color: white;
+  border: 3px solid #a1d1a3;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.next_btn_box {
+  margin-top: 20px;
+}
+
+.next_btn {
+  background-color: #a1d1a3;
+  border: none;
+  border-radius: 10px;
+  color: #fff8dc;
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+}
