@@ -95,6 +95,10 @@ table {
   padding: 3px 8px;
 }
 
+.question_item {
+  font-size: 14px;
+}
+
 .data_row:hover {
   background-color: #f8eec3;
 }
@@ -113,4 +117,53 @@ table {
   color: white;
   margin-left: 10px;
   font-size: 12px;
+}
+
+/*미디어 쿼리*/
+
+@media (min-width: 1280px) {
+  .main_container {
+    margin: 120px 120px;
+  }
+}
+
+/*태블릿*/
+@media (min-width: 768px) and (max-width: 1199px) {
+  .main_container {
+    margin: 100px 50px;
+  }
+  .question_container {
+    margin: 80px 15% 0 15%;
+  }
+}
+
+/*모바일*/
+@media (min-width: 360px) and (max-width: 767px) {
+  .main_container {
+    margin: 60px 24px;
+  }
+  .main_title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .start_btn_container {
+    margin: 30px 10% 0 10%;
+  }
+  .start_btn {
+    font-size: 18px;
+    height: 50px;
+    width: 80%;
+  }
+  .question_container {
+    margin: 0;
+  }
+  .question_list_container {
+    margin-top: 20px;
+  }
+  .list_title {
+    font-size: 11px;
+  }
+  .question_item {
+    font-size: 12px;
+  }
 }
