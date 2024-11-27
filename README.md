@@ -2,12 +2,14 @@
 
 ## 프로젝트 소개
 
-- 제작 기간 : 2024.11.08 ~ 11.14 (4일 소요)
+- 제작 기간 : 2024.11.08 ~ 11.14
 - 참여 인원 : [@subin5874](https://github.com/subin5874)
 
 - React와 TypeScript를 사용한 프론트엔드 프로젝트입니다.
 - 질문을 작성할 수 있고, 질문을 랜덤으로 보여줍니다.
 - localstorage에 질문 데이터를 저장합니다.
+
+<br>
 
 ## 사용 기술
 
@@ -23,6 +25,8 @@
 
 <img src="https://img.shields.io/badge/visualstudiocode-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white">
 
+<br>
+
 ## 주요 기능
 
 ### 질문 추가/삭제 기능
@@ -37,6 +41,8 @@
 
 - localstorage에 질문 리스트를 저장하여 새로고침 시에도 유지되도록 하였습니다.
 
+<br>
+
 ## 트러블슈팅
 
 ![TroubleShooting](./assets/images/TroubleShooting1.png)
@@ -45,11 +51,15 @@
 
 웹 페이지를 새로고침한 후, localstorage에 저장된 값이 초기화 되는 문제가 발생하였다.
 
+<br>
+
 ### 원인 : useState로 상태를 초기화할 때 빈 배열로 설정
 
 <img src="./assets/images/beforeCode.png" alt="beforeCode" width="500"/>
 
 상태 초기화가 useState에서 이루어지기 때문에 useEffect가 실행되기 전에 questionList의 상태가 빈 배열로 설정되었고, 이로 인해 localstorage의 값이 반영되지 않았다.
+
+<br>
 
 ### 해결 방법 : useState에 초기화 함수 사용
 
@@ -57,13 +67,19 @@
 
 useEffect를 사용하지 않고, useState에 초기화 함수를 사용하여 localstorage에 저장된 데이터를 가져오도록 변경하였다.
 
+<br>
+
 ### 결과 : 새로고침 후 localstorage의 데이터를 성공적으로 받아옴
 
 새로고침 후에 localstorage에 저장된 데이터를 성공적으로 받아와 상태에 반영되었다.
 
+<br>
+
 ### 학습한 점
 
 useState 훅에서 초기값을 설정할 때 직접 할당하는 방법 말고도 초기화 함수를 사용할 수 있다는 점을 알게 되었다.
+
+<br>
 
 ## 구현 화면
 
@@ -74,6 +90,8 @@ useState 훅에서 초기값을 설정할 때 직접 할당하는 방법 말고�
 ### 2) 랜덤 질문 페이지
 
 ![randomquestion](./assets/images/RandomQuestion.png)
+
+<br>
 
 ## 느낀점
 
