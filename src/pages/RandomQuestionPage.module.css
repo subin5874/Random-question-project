@@ -38,3 +38,41 @@
   font-size: 16px;
   font-weight: bold;
 }
+
+@media (min-width: 1280px) {
+  .main_container {
+    margin: 120px 120px;
+  }
+}
+
+/*태블릿*/
+@media (min-width: 768px) and (max-width: 1199px) {
+  .main_container {
+    margin: 100px 50px;
+  }
+}
+
+/*모바일*/
+@media (min-width: 360px) and (max-width: 767px) {
+  .main_container {
+    margin: 60px 24px;
+  }
+  .back_btn {
+    font-size: 14px;
+    top: 5%;
+    left: 5%;
+  }
+  .main_title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .randomQuestion_container {
+    margin: 50px 0 0 0;
+  }
+  .content_item {
+    font-size: 12px;
+  }
+  .next_btn {
+    font-size: 12px;
+  }
+}
